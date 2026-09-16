@@ -2,12 +2,54 @@
 Element-selektor h1 {}
 Klass-selektor .klass {}
 Id-selektor # {}
+
+Olika specificitet
+!important slår igenom all specificitet, undvik om inte absolut nödvändig
+
+
+Box-modellen
 */
+
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+}
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    border: 3px solid black;
+}
 
 h1 {
     font-size: x-large;
+    margin: 0;
+    margin-top: 15px;
+    color: #b4db6f;
 }
 
 h2 {
     font-size: larger;
+}
+
+.navbar {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin-right: 15px;
 }
