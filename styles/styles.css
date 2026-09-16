@@ -1,0 +1,13 @@
+/* Selektorer 
+Element-selektor h1 {}
+Klass-selektor .klass {}
+Id-selektor # {}
+*/
+
+h1 {
+    font-size: x-large;
+}
+
+h2 {
+    font-size: larger;
+}
