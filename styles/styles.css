@@ -6,41 +6,46 @@ Id-selektor # {}
 Olika specificitet
 !important slår igenom all specificitet, undvik om inte absolut nödvändig
 
-
 Box-modellen
+
+Enheter
+px, rem, %, vh/vw
+
+Färger
+rgb (0, 0, 0)
+hex #000000
 */
 
-body {
-    font-family: Helvetica, sans-serif;
-    margin: 0;
+:root {
+    --MoltenLava: rgb(120, 0, 0);
+    --FlagRed: rgb(193, 18, 31);
+    --PapayaWhip: rgb(253, 240, 213);
+    --DeepSpaceBlue: rgb(0, 48, 73);
+    --SteelBlue: rgb(102, 155, 188);
 }
 
-main {
-    margin-left: 20px;
-    margin-right: 20px;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-
-    border: 3px solid black;
+* {
+    font-family: Helvetica, sans-serif;
 }
 
 h1 {
-    font-size: x-large;
-    margin: 0;
-    margin-top: 15px;
-    color: #b4db6f;
+    font-size: 1.5rem;
+    color: var(--DeepSpaceBlue);
 }
 
 h2 {
-    font-size: larger;
+    font-size: 1.2rem;
+}
+
+body {
+    margin: 0;
 }
 
 .navbar {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 ul {
@@ -52,4 +57,37 @@ ul {
 li {
     display: inline;
     margin-right: 15px;
+
+}
+
+/* ul li:nth-child(1) {
+    background-color: red;
+} */
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    background-color: var(--PapayaWhip);
+}
+
+.background-img {
+    color: var(--PapayaWhip);
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c5/Roasted_coffee_beans.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px;
+}
+
+.background-img>h2 {
+    margin: 0;
 }
