@@ -1,21 +1,30 @@
-/* Selektorer 
-Element-selektor h1 {}
-Klass-selektor .klass {}
-Id-selektor # {}
+/*
+* SELEKTORER – hur vi väljer ut vad som ska stylas
+  Element-selektor:  h1 {}       → alla <h1>
+  Klass-selektor:    .klass {}   → alla element med class="klass" (kan återanvändas)
+  Id-selektor:       #id {}      → ett enda element med id="id" (unikt per sida)
 
-Olika specificitet
-!important slår igenom all specificitet, undvik om inte absolut nödvändig
+* SPECIFICITET – vem vinner när flera regler krockar?
+  element < klass < id < inline-style
+  Vid lika specificitet vinner regeln som står längst ner.
+! !important slår igenom all specificitet – undvik om det inte är absolut nödvändigt
 
-Box-modellen
+* BOX-MODELLEN – varje element är en låda:
+  content → padding (innanför kanten) → border (kanten) → margin (utanför kanten)
 
-Enheter
-px, rem, %, vh/vw
+* ENHETER
+  px  = fast storlek
+  rem = relativt till rotens textstorlek (oftast 16px) → 1.5rem = 24px
+  %   = relativt till föräldern
+  vh/vw = procent av fönstrets höjd/bredd
 
-Färger
-rgb (0, 0, 0)
-hex #000000
+* FÄRGER
+  rgb(0, 0, 0)  = röd, grön, blå (0–255)
+  hex #000000   = samma sak skrivet i hexadecimal
 */
 
+/* * CSS-variabler (custom properties) – definiera en gång, använd överallt med var(--namn) */
+/* ? Vill du byta färgtema? Ändra bara här så uppdateras hela sidan */
 :root {
     --MoltenLava: rgb(120, 0, 0);
     --FlagRed: rgb(193, 18, 31);
@@ -24,6 +33,7 @@ hex #000000
     --SteelBlue: rgb(102, 155, 188);
 }
 
+/* * Universalselektorn * väljer ALLA element */
 * {
     font-family: Helvetica, sans-serif;
 }
@@ -37,10 +47,12 @@ h2 {
     font-size: 1.2rem;
 }
 
+/* ? Webbläsaren ger body en egen margin som standard – den nollställer vi här */
 body {
     margin: 0;
 }
 
+/* ? Kortform: padding: 10px 20px; (topp/botten, vänster/höger) gör samma sak */
 .navbar {
     padding-left: 20px;
     padding-right: 20px;
@@ -48,22 +60,26 @@ body {
     padding-bottom: 10px;
 }
 
+/* Tar bort punkter och standardavstånd från listor */
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
+/* * display: inline lägger listpunkterna bredvid varandra istället för under */
 li {
     display: inline;
     margin-right: 15px;
 
 }
 
+/* ? Pseudoklass: nth-child(1) väljer första <li> i en <ul> – testa att avkommentera! */
 /* ul li:nth-child(1) {
     background-color: red;
 } */
 
+/* * margin = luft UTANFÖR lådan, padding = luft INNANFÖR lådan */
 main {
     margin-left: 20px;
     margin-right: 20px;
@@ -76,18 +92,20 @@ main {
     background-color: var(--PapayaWhip);
 }
 
+/* Bakgrundsbild som täcker hela lådan */
 .background-img {
     color: var(--PapayaWhip);
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c5/Roasted_coffee_beans.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: cover;       /* fyller lådan, beskär vid behov */
+    background-position: center;  /* centrerar bilden */
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 30px;
 }
 
+/* * Barnselektor ">" – väljer bara <h2> som ligger DIREKT i .background-img */
 .background-img>h2 {
     margin: 0;
 }

@@ -1,5 +1,15 @@
-/* DRY - Don´t repeat yourself */
+/*
+* DRY – Don't Repeat Yourself
+  Gemensamma egenskaper ligger i .box, det som skiljer lådorna åt i .box-1, .box-2 osv.
+  Ett element kan ha flera klasser: class="box box-border box-1"
 
+? Variablerna (--MoltenLava m.fl.) kommer från styles.css
+  – därför måste den filen länkas in FÖRE boxes.css i HTML:en
+*/
+
+/* ! Box-modellen: den synliga lådan blir INTE 100px bred!
+     100px (width) + 2 × 20px (padding) + 2 × 3px (border) = 146px
+     ? Med box-sizing: border-box; räknas padding och border in i width */
 .box {
     height: 100px;
     width: 100px;
@@ -16,6 +26,7 @@
     background-color: var(--MoltenLava);
 }
 
+/* * :hover är en pseudoklass – stilen gäller bara när musen är över lådan */
 .box-1:hover {
     background-color: black;
     height: 300px;

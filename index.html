@@ -8,7 +8,7 @@
     <title>Cafè - Hem</title>
 </head>
 
-<!--Kodkommentar-->
+<!-- * Så här skriver man en kommentar i HTML – den syns inte på sidan -->
 
 <body>
     <header>
@@ -34,9 +34,11 @@
         <section>
             <h1>Välkomment till vårt cafè</h1>
             <p>Hantverkskaffe mitt Malmö</p>
+            <!-- ! Inline-style (style="...") har högst specificitet och är svår att återanvända – lägg hellre stilen i CSS-filen -->
             <img style="width: 200px; border-radius: 10px;" src="assets/images.jpeg" alt="">
         </section>
 
+        <!-- ? Bakgrundsbilden sätts i CSS (.background-img), inte med <img> – varför kan det vara smart här? -->
         <div class="background-img">
             <h2>Öppettider</h2>
         </div>
