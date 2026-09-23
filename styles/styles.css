@@ -27,7 +27,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--SteelBlue);
+    background-color: var(--DeepSpaceBlue);
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -56,10 +56,11 @@ body {
 
 .navbar-list>li>a {
     color: var(--PapayaWhip);
+    text-decoration: none;
 }
 
 .navbar-list>li>a:hover {
-    color: var(--MoltenLava);
+    color: var(--FlagRed);
 }
 
 main {
@@ -98,8 +99,7 @@ main {
 }
 
 footer {
-    font-size: larger;
-    background-color: var(--SteelBlue);
+    background-color: var(--DeepSpaceBlue);
     padding: 20px 10px 20px 10px;
     color: var(--PapayaWhip);
     display: flex;
