@@ -1,30 +1,3 @@
-/*
-* SELEKTORER – hur vi väljer ut vad som ska stylas
-  Element-selektor:  h1 {}       → alla <h1>
-  Klass-selektor:    .klass {}   → alla element med class="klass" (kan återanvändas)
-  Id-selektor:       #id {}      → ett enda element med id="id" (unikt per sida)
-
-* SPECIFICITET – vem vinner när flera regler krockar?
-  element < klass < id < inline-style
-  Vid lika specificitet vinner regeln som står längst ner.
-! !important slår igenom all specificitet – undvik om det inte är absolut nödvändigt
-
-* BOX-MODELLEN – varje element är en låda:
-  content → padding (innanför kanten) → border (kanten) → margin (utanför kanten)
-
-* ENHETER
-  px  = fast storlek
-  rem = relativt till rotens textstorlek (oftast 16px) → 1.5rem = 24px
-  %   = relativt till föräldern
-  vh/vw = procent av fönstrets höjd/bredd
-
-* FÄRGER
-  rgb(0, 0, 0)  = röd, grön, blå (0–255)
-  hex #000000   = samma sak skrivet i hexadecimal
-*/
-
-/* * CSS-variabler (custom properties) – definiera en gång, använd överallt med var(--namn) */
-/* ? Vill du byta färgtema? Ändra bara här så uppdateras hela sidan */
 :root {
     --MoltenLava: rgb(120, 0, 0);
     --FlagRed: rgb(193, 18, 31);
@@ -33,7 +6,6 @@
     --SteelBlue: rgb(102, 155, 188);
 }
 
-/* * Universalselektorn * väljer ALLA element */
 * {
     font-family: Helvetica, sans-serif;
 }
@@ -47,39 +19,49 @@ h2 {
     font-size: 1.2rem;
 }
 
-/* ? Webbläsaren ger body en egen margin som standard – den nollställer vi här */
 body {
     margin: 0;
 }
 
-/* ? Kortform: padding: 10px 20px; (topp/botten, vänster/höger) gör samma sak */
 .navbar {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--SteelBlue);
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-/* Tar bort punkter och standardavstånd från listor */
-ul {
+.navbar-logo-container {
+    height: 50px;
+    box-sizing: border-box;
+    padding: 5px 0 5px 0;
+}
+
+.navbar-logo-img {
+    height: 100%
+}
+
+.navbar-list {
+    display: flex;
+    gap: 1rem;
     list-style-type: none;
     margin: 0;
-    padding: 0;
 }
 
-/* * display: inline lägger listpunkterna bredvid varandra istället för under */
-li {
-    display: inline;
-    margin-right: 15px;
-
+.navbar-list>li {
+    font-size: larger;
+    font-weight: bolder;
 }
 
-/* ? Pseudoklass: nth-child(1) väljer första <li> i en <ul> – testa att avkommentera! */
-/* ul li:nth-child(1) {
-    background-color: red;
-} */
+.navbar-list>li>a {
+    color: var(--PapayaWhip);
+}
 
-/* * margin = luft UTANFÖR lådan, padding = luft INNANFÖR lådan */
+.navbar-list>li>a:hover {
+    color: var(--MoltenLava);
+}
+
 main {
     margin-left: 20px;
     margin-right: 20px;
@@ -92,20 +74,34 @@ main {
     background-color: var(--PapayaWhip);
 }
 
-/* Bakgrundsbild som täcker hela lådan */
+.home-section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    gap: 1rem;
+}
+
 .background-img {
     color: var(--PapayaWhip);
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c5/Roasted_coffee_beans.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original");
     background-repeat: no-repeat;
-    background-size: cover;       /* fyller lådan, beskär vid behov */
-    background-position: center;  /* centrerar bilden */
+    background-size: cover;
+    background-position: center;
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 30px;
 }
 
-/* * Barnselektor ">" – väljer bara <h2> som ligger DIREKT i .background-img */
 .background-img>h2 {
     margin: 0;
+}
+
+footer {
+    font-size: larger;
+    background-color: var(--SteelBlue);
+    padding: 20px 10px 20px 10px;
+    color: var(--PapayaWhip);
+    display: flex;
+    justify-content: center;
 }

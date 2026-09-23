@@ -8,12 +8,16 @@
     <title>Cafè - Hem</title>
 </head>
 
-<!-- * Så här skriver man en kommentar i HTML – den syns inte på sidan -->
-
 <body>
     <header>
         <nav class="navbar">
-            <ul>
+            <div class="navbar-logo-container">
+                <a href="index.html">
+                    <img class="navbar-logo-img" src="assets/cafe-glod-logo.png">
+                </a>
+            </div>
+
+            <ul class="navbar-list">
                 <li>
                     <a href="index.html">Hem</a>
                 </li>
@@ -31,14 +35,14 @@
     </header>
 
     <main>
-        <section>
-            <h1>Välkomment till vårt cafè</h1>
-            <p>Hantverkskaffe mitt Malmö</p>
-            <!-- ! Inline-style (style="...") har högst specificitet och är svår att återanvända – lägg hellre stilen i CSS-filen -->
+        <section class="home-section">
+            <div>
+                <h1>Välkomment till vårt cafè</h1>
+                <p>Hantverkskaffe mitt Malmö</p>
+            </div>
             <img style="width: 200px; border-radius: 10px;" src="assets/images.jpeg" alt="">
         </section>
 
-        <!-- ? Bakgrundsbilden sätts i CSS (.background-img), inte med <img> – varför kan det vara smart här? -->
         <div class="background-img">
             <h2>Öppettider</h2>
         </div>

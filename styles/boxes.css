@@ -1,23 +1,13 @@
-/*
-* DRY – Don't Repeat Yourself
-  Gemensamma egenskaper ligger i .box, det som skiljer lådorna åt i .box-1, .box-2 osv.
-  Ett element kan ha flera klasser: class="box box-border box-1"
-
-? Variablerna (--MoltenLava m.fl.) kommer från styles.css
-  – därför måste den filen länkas in FÖRE boxes.css i HTML:en
-*/
-
-/* ! Box-modellen: den synliga lådan blir INTE 100px bred!
-     100px (width) + 2 × 20px (padding) + 2 × 3px (border) = 146px
-     ? Med box-sizing: border-box; räknas padding och border in i width */
 .box-container {
     border: 1px solid black;
     display: flex;
     flex-direction: column;
+    gap: 1rem
 }
 
 .box {
     box-sizing: border-box;
+    border: 1px solid rgb(0, 0, 0);
     height: 100px;
     width: 100px;
     color: var(--PapayaWhip);
@@ -25,10 +15,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.box-border {
-    border: 3px solid rgb(0, 0, 0);
 }
 
 .box-1 {
