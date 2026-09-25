@@ -72,15 +72,24 @@ main {
 }
 
 main {
-    margin-left: 20px;
-    margin-right: 20px;
-
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 50px;
     padding-right: 50px;
 
     background-color: var(--PapayaWhip);
+}
+
+.topics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.topic-card {
+    border: 1px solid var(--DeepSpaceBlue);
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .home-section {
