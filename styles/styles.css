@@ -137,3 +137,21 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.topic-card h3 {
+    font-size: 1rem;
+    color: var(--DeepSpaceBlue);
+    margin-bottom: 0.25rem;
+}
+
+.topic-card pre {
+    background-color: var(--DeepSpaceBlue);
+    color: var(--PapayaWhip);
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+.topic-card code {
+    font-family: monospace;
+}

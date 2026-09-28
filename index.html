@@ -44,14 +44,37 @@
                 <h2>HTML</h2>
                 <p>
                     HTML står för HyperText Markup Language och används för att skapa strukturen
-                    på en webbsida. Med HTML beskriver vi vad olika delar av innehållet är.
+                    på en webbsida. Med HTML beskriver vi vad olika delar av innehållet är,
+                    till exempel en rubrik, ett stycke text, en länk eller en bild.
                 </p>
+                <p>
+                    HTML består av element som skrivs med taggar. De flesta element har en
+                    starttagg och en sluttagg, till exempel &lt;p&gt; och &lt;/p&gt;.
+                    Element kan ha attribut som ger extra information, till exempel
+                    href på en länk eller src på en bild.
+                </p>
+                <h3>Viktigt att kunna</h3>
                 <ul>
-                    <li>Rubriker skrivs med h1 till h6.</li>
+                    <li>Rubriker skrivs med h1 till h6. Använd bara en h1 per sida.</li>
                     <li>Textstycken skrivs med p.</li>
-                    <li>Länkar skapas med a-elementet.</li>
-                    <li>Bilder läggs in med img-elementet.</li>
+                    <li>Länkar skapas med a-elementet och attributet href.</li>
+                    <li>Bilder läggs in med img-elementet och attributen src och alt.</li>
+                    <li>Listor skapas med ul (punktlista) eller ol (numrerad lista) och li.</li>
+                    <li>
+                        Semantiska element som header, nav, main, section, article och footer
+                        beskriver vilken roll innehållet har på sidan.
+                    </li>
                 </ul>
+                <h3>Exempel</h3>
+<pre><code>&lt;article&gt;
+    &lt;h2&gt;Mitt café&lt;/h2&gt;
+    &lt;p&gt;Välkommen in på en kopp kaffe!&lt;/p&gt;
+    &lt;a href="menu.html"&gt;Se menyn&lt;/a&gt;
+&lt;/article&gt;</code></pre>
+                <p>
+                    <strong>Tips:</strong> Tänk på vad innehållet <em>är</em> när du väljer
+                    element, inte hur det ska se ut. Utseendet sköter vi med CSS.
+                </p>
             </article>
 
             <article class="topic-card">
@@ -61,12 +84,38 @@
                     HTML-innehållet ska se ut. Med CSS kan vi ändra färger, typsnitt,
                     storlekar, avstånd och layout.
                 </p>
+                <p>
+                    En CSS-regel består av en selektor och en eller flera
+                    deklarationer. Varje deklaration har en egenskap och ett värde.
+                    Om flera regler styr samma sak vinner den mest specifika, eller den
+                    som står sist i filen. Det är det som kallas "cascading".
+                </p>
+                <h3>Viktigt att kunna</h3>
                 <ul>
                     <li>Selektorer väljer vilka HTML-element som ska stylas.</li>
-                    <li>Egenskaper beskriver vad som ska ändras.</li>
-                    <li>Värden bestämmer hur ändringen ska se ut.</li>
-                    <li>CSS kan skrivas i en separat CSS-fil.</li>
+                    <li>Egenskaper beskriver vad som ska ändras, till exempel color.</li>
+                    <li>Värden bestämmer hur ändringen ska se ut, till exempel red.</li>
+                    <li>
+                        Klasser väljs med en punkt (.topic-card) och används när flera
+                        element ska se likadana ut.
+                    </li>
+                    <li>
+                        Boxmodellen: varje element är en låda med content, padding,
+                        border och margin.
+                    </li>
+                    <li>CSS skrivs i en separat CSS-fil som kopplas in med link i head.</li>
                 </ul>
+                <h3>Exempel</h3>
+<pre><code>.topic-card {
+    border: 1px solid navy;
+    border-radius: 10px;
+    padding: 10px;
+}</code></pre>
+                <p>
+                    <strong>Tips:</strong> Använd webbläsarens utvecklarverktyg
+                    (högerklicka och välj "Inspektera") för att se vilken CSS som
+                    gäller för ett element och testa ändringar direkt.
+                </p>
             </article>
 
             <article class="topic-card">
@@ -76,12 +125,32 @@
                     i en rad eller kolumn. Den är särskilt användbar när innehåll ska fördelas
                     jämnt eller centreras.
                 </p>
+                <p>
+                    Flexbox fungerar i en dimension åt gången. Vi sätter display: flex på
+                    föräldern (flex-containern), och då blir alla direkta barn
+                    flex-items som placeras längs en huvudaxel och en korsaxel.
+                </p>
+                <h3>Viktigt att kunna</h3>
                 <ul>
-                    <li>display: flex aktiverar Flexbox.</li>
-                    <li>flex-direction styr riktningen.</li>
+                    <li>display: flex aktiverar Flexbox på föräldern.</li>
+                    <li>flex-direction styr riktningen: row (rad) eller column (kolumn).</li>
                     <li>justify-content styr placering längs huvudaxeln.</li>
                     <li>align-items styr placering längs korsaxeln.</li>
+                    <li>gap skapar mellanrum mellan elementen.</li>
+                    <li>flex-wrap: wrap låter elementen hoppa ner på en ny rad när platsen tar slut.</li>
                 </ul>
+                <h3>Exempel</h3>
+<pre><code>.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}</code></pre>
+                <p>
+                    <strong>Tips:</strong> Om du byter flex-direction till column byter
+                    huvudaxeln och korsaxeln plats. Då styr justify-content det lodräta
+                    och align-items det vågräta.
+                </p>
             </article>
 
             <article class="topic-card">
@@ -91,22 +160,149 @@
                     och kolumner. Grid passar bra när en hel sida eller större delar av en
                     layout ska delas upp i tydliga områden.
                 </p>
+                <p>
+                    Till skillnad från Flexbox arbetar Grid i två dimensioner samtidigt,
+                    både rader och kolumner. Enheten fr betyder "en del av det lediga
+                    utrymmet", så 1fr 1fr ger två lika breda kolumner.
+                </p>
+                <h3>Viktigt att kunna</h3>
                 <ul>
                     <li>display: grid aktiverar CSS Grid.</li>
                     <li>grid-template-columns skapar kolumner.</li>
                     <li>grid-template-rows skapar rader.</li>
                     <li>gap skapar mellanrum mellan rutorna.</li>
+                    <li>repeat(3, 1fr) är ett kortare sätt att skriva 1fr 1fr 1fr.</li>
+                    <li>
+                        grid-column och grid-row låter ett element sträcka sig över
+                        flera kolumner eller rader.
+                    </li>
                 </ul>
+                <h3>Exempel</h3>
+<pre><code>.topics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}</code></pre>
+                <p>
+                    <strong>Tips:</strong> Använd Grid för den stora layouten på sidan och
+                    Flexbox för att placera saker inuti en enskild del, till exempel en
+                    meny.
+                </p>
             </article>
 
             <article class="topic-card">
                 <h2>Position</h2>
                 <p>
-                    Position
+                    Med egenskapen position kan vi flytta ett element från dess vanliga
+                    plats på sidan. Tillsammans med top, right, bottom och left bestämmer
+                    vi exakt var elementet ska hamna.
                 </p>
+                <p>
+                    Normalt ligger element efter varandra i det som kallas
+                    "normalt flöde". Beroende på vilket värde vi väljer på position
+                    stannar elementet kvar i flödet eller lyfts ut ur det, så att andra
+                    element beter sig som om det inte fanns där.
+                </p>
+                <h3>De olika värdena</h3>
                 <ul>
-                    <li>Position</li>
+                    <li>
+                        <strong>static</strong> är standardvärdet. Elementet ligger i normalt
+                        flöde och top, left med flera påverkar inte.
+                    </li>
+                    <li>
+                        <strong>relative</strong> flyttar elementet i förhållande till sin
+                        vanliga plats. Platsen det lämnade finns kvar i flödet.
+                    </li>
+                    <li>
+                        <strong>absolute</strong> tar bort elementet ur flödet och placerar det
+                        i förhållande till närmaste förälder som har en position
+                        (inte static).
+                    </li>
+                    <li>
+                        <strong>fixed</strong> placerar elementet i förhållande till
+                        webbläsarfönstret. Det ligger kvar på samma plats när man scrollar.
+                    </li>
+                    <li>
+                        <strong>sticky</strong> beter sig som relative tills man scrollar förbi
+                        en viss punkt, sedan fastnar elementet, som vår navbar.
+                    </li>
+                    <li>
+                        <strong>z-index</strong> bestämmer vilket element som hamnar överst
+                        när element överlappar varandra.
+                    </li>
                 </ul>
+                <h3>Exempel</h3>
+<pre><code>.box-container {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+}</code></pre>
+                <p>
+                    <strong>Tips:</strong> Vill du placera något med absolute inuti en viss
+                    låda? Ge lådan position: relative. Annars utgår elementet från
+                    hela sidan.
+                </p>
+            </article>
+
+            <article class="topic-card">
+                <h2>Responsiv design</h2>
+                <p>
+                    Responsiv design betyder att en webbsida anpassar sig efter skärmen
+                    den visas på, oavsett om det är en mobil, en surfplatta eller en stor
+                    datorskärm. Innehållet ska vara lätt att läsa och använda överallt.
+                </p>
+                <p>
+                    Vi arbetar mobile first. Det betyder att vi först skriver CSS för små
+                    skärmar och sedan lägger till media queries med min-width som ändrar
+                    layouten när skärmen blir bredare.
+                </p>
+                <h3>Viktigt att kunna</h3>
+                <ul>
+                    <li>
+                        Meta-taggen viewport i head behövs för att mobilen ska visa sidan
+                        i rätt storlek.
+                    </li>
+                    <li>
+                        En media query (@media) innehåller CSS som bara gäller när ett
+                        villkor är uppfyllt, till exempel en viss skärmbredd.
+                    </li>
+                    <li>
+                        min-width betyder "från och med den här bredden och uppåt".
+                    </li>
+                    <li>
+                        Brytpunkter (breakpoints) är de bredder där layouten ändras, här
+                        640px och 1024px.
+                    </li>
+                    <li>
+                        Relativa enheter som %, rem och fr anpassar sig bättre än fasta
+                        pixelvärden.
+                    </li>
+                    <li>
+                        Bilder kan göras flexibla med max-width: 100% så att de aldrig
+                        blir bredare än sin förälder.
+                    </li>
+                </ul>
+                <h3>Exempel</h3>
+<pre><code>/* Mobil: en kolumn */
+.topics {
+    grid-template-columns: 1fr;
+}
+
+/* Surfplatta och uppåt: två kolumner */
+@media screen and (min-width: 640px) {
+    .topics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}</code></pre>
+                <p>
+                    <strong>Tips:</strong> Gör webbläsarfönstret smalare och bredare och se
+                    hur korten på den här sidan ändras. I utvecklarverktygen finns även
+                    ett läge där du kan testa hur sidan ser ut på olika mobiler.
+                </p>
             </article>
         </section>
     </main>
