@@ -1,7 +1,7 @@
 .box-container {
     border: 1px solid black;
     display: flex;
-    gap: 1rem
+    gap: 1rem;
 }
 
 .box {

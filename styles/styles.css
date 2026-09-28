@@ -27,8 +27,9 @@ body {
     flex-direction: column;
 }
 
-main {
-    flex: 1;
+header {
+    position: sticky;
+    top: 0px;
 }
 
 .navbar {
@@ -76,13 +77,13 @@ main {
     padding-bottom: 10px;
     padding-left: 50px;
     padding-right: 50px;
-
     background-color: var(--PapayaWhip);
+    flex: 1;
 }
 
 .topics {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
 }
 
@@ -121,4 +122,18 @@ footer {
     color: var(--PapayaWhip);
     display: flex;
     justify-content: center;
+}
+
+/* Mobil-first */
+
+@media screen and (min-width: 640px) {
+    .topics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .topics {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
