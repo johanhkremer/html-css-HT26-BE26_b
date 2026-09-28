@@ -85,9 +85,20 @@ main {
 
 .home-section {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     justify-content: start;
     gap: 1rem;
+}
+
+.home-section-text {
+    flex: 2;
+}
+
+.home-section-img {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .background-img {
@@ -112,4 +123,10 @@ footer {
     color: var(--PapayaWhip);
     display: flex;
     justify-content: center;
+}
+
+@media screen and (min-width: 640px) {
+    .home-section {
+        flex-direction: row-reverse;
+    }
 }
