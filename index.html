@@ -5,22 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css" />
-    <title>Cafè - Hem</title>
+    <title>HTML/CSS</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
+        <nav aria-label="Huvudmeny" class="navbar">
             <div class="navbar-logo-container">
                 <a href="index.html">
-                    <img class="navbar-logo-img" src="assets/HTML5_logo.svg">
+                    <img class="navbar-logo-img" src="assets/HTML5_logo.svg" alt="Homepage">
                 </a>
             </div>
 
             <ul class="navbar-list">
-                <li>
-                    <a href="index.html">Hem</a>
-                </li>
                 <li>
                     <a href="flex-boxes.html">Flex</a>
                 </li>
@@ -29,6 +26,9 @@
                 </li>
                 <li>
                     <a href="position-boxes.html">Position</a>
+                </li>
+                <li>
+                    <a href="bootstrap.html">Bootstrap</a>
                 </li>
                 <li>
                     <a href="cafe/index.html">Café</a>
@@ -66,7 +66,7 @@
                     </li>
                 </ul>
                 <h3>Exempel</h3>
-<pre><code>&lt;article&gt;
+                <pre><code>&lt;article&gt;
     &lt;h2&gt;Mitt café&lt;/h2&gt;
     &lt;p&gt;Välkommen in på en kopp kaffe!&lt;/p&gt;
     &lt;a href="menu.html"&gt;Se menyn&lt;/a&gt;
@@ -77,9 +77,13 @@
                 </p>
                 <h3>Lär dig mer</h3>
                 <ul>
-                    <li>Dokumentation: <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content" target="_blank">MDN: Structuring content with HTML</a></li>
-                    <li>Öva: <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank">freeCodeCamp: Responsive Web Design</a></li>
-                    <li>Video: <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU" target="_blank">Programming with Mosh: HTML Tutorial for Beginners</a></li>
+                    <li>Dokumentation: <a
+                            href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content"
+                            target="_blank">MDN: Structuring content with HTML</a></li>
+                    <li>Öva: <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+                            target="_blank">freeCodeCamp: Responsive Web Design</a></li>
+                    <li>Video: <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU" target="_blank">Programming with
+                            Mosh: HTML Tutorial for Beginners</a></li>
                 </ul>
             </article>
 
@@ -112,7 +116,7 @@
                     <li>CSS skrivs i en separat CSS-fil som kopplas in med link i head.</li>
                 </ul>
                 <h3>Exempel</h3>
-<pre><code>.topic-card {
+                <pre><code>.topic-card {
     border: 1px solid navy;
     border-radius: 10px;
     padding: 10px;
@@ -124,9 +128,13 @@
                 </p>
                 <h3>Lär dig mer</h3>
                 <ul>
-                    <li>Dokumentation: <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics" target="_blank">MDN: CSS styling basics</a></li>
-                    <li>Öva: <a href="https://flukeout.github.io/" target="_blank">CSS Diner (spel om selektorer)</a></li>
-                    <li>Video: <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU" target="_blank">Programming with Mosh: HTML Tutorial for Beginners</a></li>
+                    <li>Dokumentation: <a
+                            href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics"
+                            target="_blank">MDN: CSS styling basics</a></li>
+                    <li>Öva: <a href="https://flukeout.github.io/" target="_blank">CSS Diner (spel om selektorer)</a>
+                    </li>
+                    <li>Video: <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU" target="_blank">Programming with
+                            Mosh: HTML Tutorial for Beginners</a></li>
                 </ul>
             </article>
 
@@ -152,7 +160,7 @@
                     <li>flex-wrap: wrap låter elementen hoppa ner på en ny rad när platsen tar slut.</li>
                 </ul>
                 <h3>Exempel</h3>
-<pre><code>.navbar {
+                <pre><code>.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -165,9 +173,13 @@
                 </p>
                 <h3>Lär dig mer</h3>
                 <ul>
-                    <li>Dokumentation: <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox" target="_blank">MDN: Flexbox</a></li>
-                    <li>Öva: <a href="https://flexboxfroggy.com/#sv" target="_blank">Flexbox Froggy (spel, finns på svenska)</a></li>
-                    <li>Video: <a href="https://www.youtube.com/watch?v=u044iM9xsWU" target="_blank">Kevin Powell: Learn flexbox the easy way</a></li>
+                    <li>Dokumentation: <a
+                            href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox"
+                            target="_blank">MDN: Flexbox</a></li>
+                    <li>Öva: <a href="https://flexboxfroggy.com/#sv" target="_blank">Flexbox Froggy (spel, finns på
+                            svenska)</a></li>
+                    <li>Video: <a href="https://www.youtube.com/watch?v=u044iM9xsWU" target="_blank">Kevin Powell: Learn
+                            flexbox the easy way</a></li>
                 </ul>
             </article>
 
@@ -196,7 +208,7 @@
                     </li>
                 </ul>
                 <h3>Exempel</h3>
-<pre><code>.topics {
+                <pre><code>.topics {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
@@ -208,9 +220,13 @@
                 </p>
                 <h3>Lär dig mer</h3>
                 <ul>
-                    <li>Dokumentation: <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Grids" target="_blank">MDN: CSS grid layout</a></li>
-                    <li>Öva: <a href="https://cssgridgarden.com/#sv" target="_blank">Grid Garden (spel, finns på svenska)</a></li>
-                    <li>Video: <a href="https://www.youtube.com/watch?v=rg7Fvvl3taU" target="_blank">Kevin Powell: Learn CSS Grid the easy way</a></li>
+                    <li>Dokumentation: <a
+                            href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Grids"
+                            target="_blank">MDN: CSS grid layout</a></li>
+                    <li>Öva: <a href="https://cssgridgarden.com/#sv" target="_blank">Grid Garden (spel, finns på
+                            svenska)</a></li>
+                    <li>Video: <a href="https://www.youtube.com/watch?v=rg7Fvvl3taU" target="_blank">Kevin Powell: Learn
+                            CSS Grid the easy way</a></li>
                 </ul>
             </article>
 
@@ -256,7 +272,7 @@
                     </li>
                 </ul>
                 <h3>Exempel</h3>
-<pre><code>.box-container {
+                <pre><code>.box-container {
     position: relative;
 }
 
@@ -272,9 +288,14 @@
                 </p>
                 <h3>Lär dig mer</h3>
                 <ul>
-                    <li>Dokumentation: <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning" target="_blank">MDN: Positioning</a></li>
-                    <li>Öva: <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Position" target="_blank">MDN: Test your skills: Position</a></li>
-                    <li>Video: <a href="https://www.youtube.com/watch?v=jx5jmI0UlXU" target="_blank">Web Dev Simplified: Learn CSS Position In 9 Minutes</a></li>
+                    <li>Dokumentation: <a
+                            href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning"
+                            target="_blank">MDN: Positioning</a></li>
+                    <li>Öva: <a
+                            href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Position"
+                            target="_blank">MDN: Test your skills: Position</a></li>
+                    <li>Video: <a href="https://www.youtube.com/watch?v=jx5jmI0UlXU" target="_blank">Web Dev Simplified:
+                            Learn CSS Position In 9 Minutes</a></li>
                 </ul>
             </article>
 
@@ -317,7 +338,7 @@
                     </li>
                 </ul>
                 <h3>Exempel</h3>
-<pre><code>/* Mobil: en kolumn */
+                <pre><code>/* Mobil: en kolumn */
 .topics {
     grid-template-columns: 1fr;
 }
@@ -335,9 +356,14 @@
                 </p>
                 <h3>Lär dig mer</h3>
                 <ul>
-                    <li>Dokumentation: <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design" target="_blank">MDN: Responsive web design</a></li>
-                    <li>Öva: <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design" target="_blank">MDN: Test your skills: Responsive design</a></li>
-                    <li>Video: <a href="https://www.youtube.com/watch?v=QGb-W-c-gIM" target="_blank">Kevin Powell: Media Query basics</a></li>
+                    <li>Dokumentation: <a
+                            href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design"
+                            target="_blank">MDN: Responsive web design</a></li>
+                    <li>Öva: <a
+                            href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design"
+                            target="_blank">MDN: Test your skills: Responsive design</a></li>
+                    <li>Video: <a href="https://www.youtube.com/watch?v=QGb-W-c-gIM" target="_blank">Kevin Powell: Media
+                            Query basics</a></li>
                 </ul>
             </article>
         </section>

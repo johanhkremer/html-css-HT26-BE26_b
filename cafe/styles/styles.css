@@ -113,6 +113,10 @@ main {
     padding: 30px;
 }
 
+.background-img-wrapper {
+    background-color: rgba(0, 0, 0, 0.714);
+}
+
 .background-img>h2 {
     margin: 0;
 }
