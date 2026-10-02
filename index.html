@@ -31,6 +31,9 @@
                     <a href="bootstrap.html">Bootstrap</a>
                 </li>
                 <li>
+                    <a href="form.html">Form</a>
+                </li>
+                <li>
                     <a href="cafe/index.html">Café</a>
                 </li>
             </ul>
@@ -364,6 +367,152 @@
                             target="_blank">MDN: Test your skills: Responsive design</a></li>
                     <li>Video: <a href="https://www.youtube.com/watch?v=QGb-W-c-gIM" target="_blank">Kevin Powell: Media
                             Query basics</a></li>
+                </ul>
+            </article>
+
+            <article class="topic-card">
+                <h2>Tillgänglighet</h2>
+                <p>
+                    Tillgänglighet (accessibility, ofta förkortat a11y) betyder att alla ska
+                    kunna använda en webbsida, oavsett om man har en synnedsättning,
+                    hörselnedsättning, motorisk funktionsnedsättning eller svårt att
+                    koncentrera sig. Det hjälper även alla andra, till exempel den som
+                    sitter i stark sol eller bara använder tangentbordet.
+                </p>
+                <p>
+                    Mycket av tillgängligheten får vi gratis genom att skriva bra HTML.
+                    Skärmläsare och andra hjälpmedel förlitar sig på att elementen
+                    beskriver vad innehållet är. Riktlinjerna kallas WCAG och bygger på
+                    att sidan ska vara möjlig att uppfatta, hanterbar, begriplig och robust.
+                </p>
+                <h3>Viktigt att kunna</h3>
+                <ul>
+                    <li>Använd semantiska element (nav, main, button) istället för div överallt.</li>
+                    <li>Alla bilder som betyder något behöver ett beskrivande alt-attribut.</li>
+                    <li>Rubriknivåerna ska komma i ordning (h1, h2, h3) så att sidan går att navigera.</li>
+                    <li>
+                        Text och bakgrund behöver tillräcklig kontrast, minst 4,5:1 för
+                        vanlig text.
+                    </li>
+                    <li>
+                        Allt ska gå att använda med enbart tangentbordet. Ta aldrig bort
+                        fokusmarkeringen (outline) utan att ersätta den.
+                    </li>
+                    <li>
+                        Formulärfält behöver en label som kopplas med for och id.
+                    </li>
+                    <li>
+                        aria-attribut, till exempel aria-label, kan komplettera när HTML
+                        inte räcker, men rätt element är alltid första valet.
+                    </li>
+                </ul>
+                <h3>Exempel</h3>
+                <pre><code>&lt;label for="namn"&gt;Namn&lt;/label&gt;
+&lt;input type="text" id="namn" name="namn"&gt;
+
+&lt;button type="button" aria-label="Stäng menyn"&gt;X&lt;/button&gt;</code></pre>
+                <p>
+                    <strong>Tips:</strong> Försök använda din egen sida med bara
+                    tangentbordet (Tab, Enter och mellanslag). Kommer du överallt och ser
+                    du alltid var du står? Då är du långt på väg.
+                </p>
+                <h3>Lär dig mer</h3>
+                <ul>
+                    <li>Dokumentation: <a
+                            href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility"
+                            target="_blank">MDN: Accessibility</a></li>
+                    <li>Öva: <a href="https://wave.webaim.org/" target="_blank">WAVE (testa en sida och se vilka
+                            tillgänglighetsfel den har)</a></li>
+                    <li>Läs mer: <a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/" target="_blank">W3C
+                            WAI: Introduction to Web Accessibility</a></li>
+                </ul>
+            </article>
+
+            <article class="topic-card">
+                <h2>Bootstrap och andra CSS-bibliotek</h2>
+                <p>
+                    Ett CSS-bibliotek (CSS framework) är färdig CSS som man kopplar in i
+                    sitt projekt för att slippa skriva allt från grunden. Bootstrap är det
+                    mest kända och ger färdiga komponenter som knappar, kort, menyer och
+                    ett responsivt rutnät.
+                </p>
+                <p>
+                    Man använder Bootstrap genom att lägga till färdiga klasser på sina
+                    HTML-element. Fördelen är att det går snabbt och ser enhetligt ut.
+                    Nackdelen är att många sidor lätt får samma utseende och att man
+                    måste lära sig bibliotekets klassnamn.
+                </p>
+                <h3>Viktigt att kunna</h3>
+                <ul>
+                    <li>
+                        Bootstrap kopplas in med en länk till CSS-filen (och vid behov en
+                        JavaScript-fil) via en CDN eller som nedladdade filer.
+                    </li>
+                    <li>
+                        Rutnätet bygger på container, row och col. Sidan delas i 12
+                        kolumner, till exempel col-md-6 för halva bredden från medelstora
+                        skärmar.
+                    </li>
+                    <li>
+                        Brytpunkterna sm, md, lg, xl och xxl gör att layouten är mobile first,
+                        precis som vår egen CSS.
+                    </li>
+                    <li>
+                        Komponenter som btn, card och navbar får du genom att lägga på
+                        klasser.
+                    </li>
+                    <li>
+                        Utility-klasser som mt-3, p-2 och text-center ger avstånd och
+                        textjustering utan egen CSS.
+                    </li>
+                    <li>
+                        Egen CSS som kopplas in efter Bootstrap kan skriva över dess
+                        utseende.
+                    </li>
+                </ul>
+                <h3>Andra bibliotek</h3>
+                <ul>
+                    <li>
+                        <strong>Tailwind CSS</strong> har inga färdiga komponenter. Man bygger
+                        utseendet direkt i HTML med små utility-klasser som flex, p-4 och
+                        text-xl. Det ger stor frihet men mycket klasser i HTML-koden.
+                    </li>
+                    <li>
+                        <strong>Bulma</strong> liknar Bootstrap men är helt utan JavaScript och
+                        bygger på Flexbox.
+                    </li>
+                    <li>
+                        <strong>Foundation</strong> är ett annat komponentbibliotek med fokus
+                        på responsivitet och tillgänglighet.
+                    </li>
+                </ul>
+                <h3>Exempel</h3>
+                <pre><code>&lt;!-- Bootstrap --&gt;
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-6"&gt;Vänster&lt;/div&gt;
+        &lt;div class="col-md-6"&gt;Höger&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button class="btn btn-primary mt-3"&gt;Skicka&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Tailwind --&gt;
+&lt;button class="mt-3 rounded bg-blue-600 px-4 py-2 text-white"&gt;
+    Skicka
+&lt;/button&gt;</code></pre>
+                <p>
+                    <strong>Tips:</strong> Ett bibliotek ersätter inte kunskaperna i CSS.
+                    Förstår du Flexbox, Grid och responsiv design förstår du också vad
+                    klasserna i Bootstrap och Tailwind gör bakom kulisserna.
+                </p>
+                <h3>Lär dig mer</h3>
+                <ul>
+                    <li>Dokumentation: <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                            target="_blank">Bootstrap: Get started</a></li>
+                    <li>Dokumentation: <a href="https://tailwindcss.com/docs" target="_blank">Tailwind CSS:
+                            Documentation</a></li>
+                    <li>Jämför: <a href="https://bulma.io/" target="_blank">Bulma</a> och <a
+                            href="https://get.foundation/" target="_blank">Foundation</a></li>
                 </ul>
             </article>
         </section>
