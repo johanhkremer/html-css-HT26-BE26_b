@@ -42,12 +42,31 @@
     <main>
         <h1>Form</h1>
 
-        <form>
-
+        <form action="https://httpbin.org/post" method="post" target="result">
+            <label for="email">E-post</label>
+            <br />
+            <input type="email" id="email" name="email">
+            <br />
+            <br />
+            <label for="password">Lösenord</label>
+            <br />
+            <input type="password" id="password" name="password" required minlength="5">
+            <br />
+            <br />
+            <input type="submit" value="Skicka">
         </form>
+
+        <br />
+
+        <iframe name="result" title="Form result"></iframe>
+
+        <img src="assets/Skärmavbild 2026-10-02 kl. 11.00.06.png"
+            alt="skärmbild av med en ritning som visar ett formulär som skickas till en server" />
     </main>
 
-    <footer></footer>
+    <footer>
+        <p>HTML/CSS 2026</p>
+    </footer>
 </body>
 
 </html>
